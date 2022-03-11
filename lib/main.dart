@@ -19,19 +19,19 @@ void main() {
       settings: ViewerSettings(
         enabledLocales: {
           'en-US': const Locale('en', 'US'),
-          'ko-KR': const Locale('ko', 'KR'),
+          'de-DE': const Locale('de', 'DE'),
         },
         enabledThemes: themes,
         widgetDisplayHeight: 500,
       ),
-      dataBuilders: {
-        String: [
-          // Need to use a condition here to use the data builder constructor's default value
-          ([p]) => p != null && p is String
-              ? MyStringDataBuilder(p)
-              : MyStringDataBuilder(),
-        ]
-      },
+      // dataBuilders: {
+      //   String: [
+      //     // Need to use a condition here to use the data builder constructor's default value
+      //     ([p]) => p != null && p is String
+      //         ? MyStringDataBuilder(p)
+      //         : MyStringDataBuilder(),
+      //   ]
+      // },
       pageGroups: [
         // Your custom pages
         ...buildGroupedPageTrees(docPages),
