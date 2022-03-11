@@ -26,7 +26,6 @@ void main() {
       ),
       // dataBuilders: {
       //   String: [
-      //     // Need to use a condition here to use the data builder constructor's default value
       //     ([p]) => p != null && p is String
       //         ? MyStringDataBuilder(p)
       //         : MyStringDataBuilder(),
